@@ -14,9 +14,12 @@ const CursorGlow = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const hoveredElementRef = useRef<Element | null>(null);
+  const previousHoveredElementRef = useRef<Element | null>(null);
+  const isButtonRef = useRef(false);
 
   const BASE_SIZE = 100; // Smaller base size
   const CURSOR_HIGHLIGHT_SIZE = 60; // Size of cursor highlight
+  const HOVER_MARGIN = 40; // Margin for hover detection (increases activation area)
 
   useEffect(() => {
     // Check if device is desktop (has hover capability and fine pointer)
@@ -88,12 +91,27 @@ const CursorGlow = () => {
 
     rafRef.current = requestAnimationFrame(animate);
 
+    // Cache for clickable elements to avoid querying on every move
+    let clickableCache: Element[] = [];
+    let lastCacheUpdate = 0;
+    const CACHE_DURATION = 2000; // Update cache every 2 seconds
+
+    const updateClickableCache = () => {
+      const now = Date.now();
+      if (now - lastCacheUpdate > CACHE_DURATION) {
+        clickableCache = Array.from(document.querySelectorAll("a, button, [role='button'], [onclick]"));
+        lastCacheUpdate = now;
+      }
+    };
+
     const updateCursorPosition = (e: MouseEvent) => {
       isVisible.current = true;
       cursorPosition.current = { x: e.clientX, y: e.clientY };
 
       // Check if hovering over clickable elements
       const element = document.elementFromPoint(e.clientX, e.clientY);
+      let finalClickableElement = null;
+
       if (element) {
         // Try to find a clickable parent element
         const clickableElement = element.closest("a, button, [role='button'], [onclick]");
@@ -105,18 +123,34 @@ const CursorGlow = () => {
           element.getAttribute("role") === "button" ||
           window.getComputedStyle(element).cursor === "pointer";
 
-        const finalClickableElement = clickableElement || (isElementClickable ? element : null);
+        finalClickableElement = clickableElement || (isElementClickable ? element : null);
+      }
 
-        if (finalClickableElement) {
-          if (hoveredElementRef.current !== finalClickableElement) {
-            hoveredElementRef.current = finalClickableElement;
-            setIsHovering(true);
+      // If not found, check cached elements with margin (only update cache periodically)
+      if (!finalClickableElement) {
+        updateClickableCache();
+        
+        for (const clickable of clickableCache) {
+          const rect = clickable.getBoundingClientRect();
+          // Skip invisible elements
+          if (rect.width === 0 && rect.height === 0) continue;
+          
+          if (
+            e.clientX >= rect.left - HOVER_MARGIN &&
+            e.clientX <= rect.right + HOVER_MARGIN &&
+            e.clientY >= rect.top - HOVER_MARGIN &&
+            e.clientY <= rect.bottom + HOVER_MARGIN
+          ) {
+            finalClickableElement = clickable;
+            break;
           }
-        } else {
-          hoveredElementRef.current = null;
-          setIsHovering(false);
-          targetPosition.current = { x: e.clientX, y: e.clientY };
-          targetSize.current = { width: BASE_SIZE, height: BASE_SIZE };
+        }
+      }
+
+      if (finalClickableElement) {
+        if (hoveredElementRef.current !== finalClickableElement) {
+          hoveredElementRef.current = finalClickableElement;
+          setIsHovering(true);
         }
       } else {
         hoveredElementRef.current = null;

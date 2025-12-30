@@ -63,13 +63,13 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-background border-b border-border"
         >
-          <div className="container px-4 py-4 flex flex-col gap-4">
+          <div className="container px-4 py-4 flex flex-col gap-4 items-end">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2 text-right"
               >
                 {link.label}
               </a>

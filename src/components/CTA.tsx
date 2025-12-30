@@ -36,12 +36,14 @@ const CTA = () => {
               more qualified leads and book more clients.
             </p>
             
-            <Button variant="hero" size="xl" asChild>
-              <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
-                Book Your Free Strategy Call
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
+            <div className="flex justify-center">
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
+                  Book Your Free Strategy Call
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
             
             <p className="text-sm text-muted-foreground mt-6">
               No commitment required • 30-minute call • Custom strategy included

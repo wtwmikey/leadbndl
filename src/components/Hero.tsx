@@ -44,24 +44,25 @@ const Hero = () => {
             </Button>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Value propositions */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+            className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-2"
           >
             {[
-              { value: "$2M+", label: "Ad Spend Managed" },
-              { value: "300%", label: "Avg. ROAS" },
-              { value: "10K+", label: "Leads Generated" },
-              { value: "97%", label: "Client Retention" },
-            ].map((stat, index) => (
+              { icon: "⚡", title: "Fast Response", description: "24/7 Lead Response" },
+              { icon: "🎯", title: "Personalized", description: "Tailored Solutions" },
+              { icon: "📊", title: "Data-Driven", description: "Strategic Approach" },
+              { icon: "🤝", title: "Dedicated Support", description: "Your Success Partner" },
+            ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
-                  {stat.value}
+                <div className="text-2xl sm:text-3xl md:text-4xl mb-2">
+                  {item.icon}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-base sm:text-lg font-bold mb-1">{item.title}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{item.description}</div>
               </div>
             ))}
           </motion.div>

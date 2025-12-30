@@ -39,7 +39,7 @@ const CTA = () => {
             <div className="flex justify-center">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
-                  Book Your Free Strategy Call
+                  Book Your Free Call
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>

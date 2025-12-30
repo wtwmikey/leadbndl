@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Target, Bot, Phone, PhoneCall, MessageSquare, Layout } from "lucide-react";
+import { Facebook, Target, Bot, Phone, MessageSquare, Layout } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -21,15 +21,8 @@ const services = [
     icon: Phone,
     title: "AI Receptionist",
     description:
-      "Never miss a call again. Our AI receptionist handles incoming calls professionally, schedules appointments, and qualifies leads.",
-    features: ["24/7 Availability", "Natural Conversations", "Appointment Scheduling"],
-  },
-  {
-    icon: PhoneCall,
-    title: "Automated Callbacks",
-    description:
-      "Automatically call back leads at optimal times, ensuring you never miss an opportunity to connect with potential clients.",
-    features: ["Smart Scheduling", "Multi-touch Follow-ups", "Call Analytics"],
+      "Never miss a call again. Our AI receptionist handles incoming calls professionally, schedules appointments, qualifies leads, and automatically calls back prospects at optimal times.",
+    features: ["24/7 Availability", "Natural Conversations", "Automated Callbacks", "Appointment Scheduling"],
   },
   {
     icon: MessageSquare,

@@ -1,7 +1,35 @@
 import { motion } from "framer-motion";
-import { Facebook, Target, TrendingUp, Users } from "lucide-react";
+import { Facebook, Target, Bot, Phone, PhoneCall, MessageSquare } from "lucide-react";
 
 const services = [
+  {
+    icon: Bot,
+    title: "AI Automation",
+    description:
+      "Intelligent automation solutions that streamline your business operations and enhance productivity.",
+    features: ["Workflow Automation", "Smart Routing", "24/7 Operations"],
+  },
+  {
+    icon: Phone,
+    title: "AI Receptionist",
+    description:
+      "Never miss a call again. Our AI receptionist handles incoming calls professionally, schedules appointments, and qualifies leads.",
+    features: ["24/7 Availability", "Natural Conversations", "Appointment Scheduling"],
+  },
+  {
+    icon: PhoneCall,
+    title: "Automated Callbacks",
+    description:
+      "Automatically call back leads at optimal times, ensuring you never miss an opportunity to connect with potential clients.",
+    features: ["Smart Scheduling", "Multi-touch Follow-ups", "Call Analytics"],
+  },
+  {
+    icon: MessageSquare,
+    title: "Text & Email Automation",
+    description:
+      "Engage leads instantly with automated text messages and email sequences that nurture prospects and drive conversions.",
+    features: ["SMS Campaigns", "Email Sequences", "Multi-channel Nurturing"],
+  },
   {
     icon: Facebook,
     title: "Meta Ads",
@@ -15,20 +43,6 @@ const services = [
     description:
       "Capture high-intent searches and turn searchers into buyers with precision-targeted campaigns.",
     features: ["Search Campaigns", "Display Network", "YouTube Ads"],
-  },
-  {
-    icon: TrendingUp,
-    title: "Conversion Optimization",
-    description:
-      "Every click matters. We optimize your landing pages and funnels for maximum conversions.",
-    features: ["A/B Testing", "Landing Pages", "Lead Magnets"],
-  },
-  {
-    icon: Users,
-    title: "Lead Nurturing",
-    description:
-      "Turn cold leads into warm prospects with automated follow-up sequences that close deals.",
-    features: ["Email Sequences", "SMS Follow-ups", "CRM Integration"],
   },
 ];
 
@@ -49,11 +63,11 @@ const Services = () => {
             What We <span className="gradient-text">Do Best</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Full-service paid advertising that delivers real, measurable results for your business.
+            AI-powered automation and lead management solutions that ensure every lead gets the attention they deserve, plus full-service paid advertising that delivers real, measurable results.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}

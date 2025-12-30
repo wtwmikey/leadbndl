@@ -25,8 +25,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance">
-            We specialize in Meta and Google ads that don't just generate clicks—they deliver 
-            warm, qualified leads ready to book with you.
+            AI-powered automation that handles every lead with personalized callbacks, texts, and emails. 
+            Plus Meta and Google ads that don't just generate clicks—they deliver warm, qualified leads ready to book with you.
           </p>
 
           {/* CTA Buttons */}

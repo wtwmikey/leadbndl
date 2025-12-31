@@ -20,13 +20,14 @@ const Hero = () => {
         >
           {/* Main headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance">
-            Turn Your Ad Spend Into{" "}
-            <span className="gradient-text">Booked Clients</span>
+            Complete Marketing &{" "}
+            <span className="gradient-text">Automation Solutions</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance">
-            AI-powered automation that handles every lead with personalized callbacks, texts, and emails. 
-            Plus Meta and Google ads that don't just generate clicks—they deliver warm, qualified leads ready to book with you.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 text-balance">
+            From paid advertising that turns clicks into clients, to AI-powered automation that never misses a lead, 
+            to stunning websites and professional video content—we provide everything you need to grow your business 
+            with a complete, integrated marketing system.
           </p>
 
           {/* CTA Buttons */}
@@ -52,10 +53,10 @@ const Hero = () => {
             className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-2"
           >
             {[
-              { icon: "⚡", title: "Fast Response", description: "24/7 Lead Response" },
-              { icon: "🎯", title: "Personalized", description: "Tailored Solutions" },
-              { icon: "📊", title: "Data-Driven", description: "Strategic Approach" },
-              { icon: "🤝", title: "Dedicated Support", description: "Your Success Partner" },
+              { icon: "📱", title: "Lead Generation", description: "Meta & Google Ads" },
+              { icon: "🤖", title: "AI Automation", description: "24/7 Operations" },
+              { icon: "🎨", title: "Web & Video", description: "Design & Editing" },
+              { icon: "📞", title: "AI Receptionist", description: "Never Miss Calls" },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl mb-2">

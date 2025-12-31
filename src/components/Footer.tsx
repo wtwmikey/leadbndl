@@ -63,10 +63,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2026 LeadBNDL. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/terms-of-service" className="hover:text-foreground transition-colors">
               Terms of Service
             </a>
           </div>

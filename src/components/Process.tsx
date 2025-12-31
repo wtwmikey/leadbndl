@@ -1,34 +1,34 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Target, Rocket, TrendingUp } from "lucide-react";
+import { Search, Target, Rocket, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: MessageSquare,
+    icon: Search,
     step: "01",
-    title: "Discovery Call",
+    title: "Discovery",
     description:
-      "We learn about your business, goals, and ideal clients to create a custom strategy.",
+      "We start by understanding your business, goals, challenges, and what you need. No assumptions—we listen first to identify the right solutions for you.",
   },
   {
     icon: Target,
     step: "02",
-    title: "Strategy Development",
+    title: "Strategy",
     description:
-      "Our team crafts a data-driven ad strategy designed to attract your perfect leads.",
+      "Based on your needs, we develop a custom strategy and plan. Whether it's ads, automation, AI receptionist, or website design—we create the roadmap.",
   },
   {
     icon: Rocket,
     step: "03",
-    title: "Campaign Launch",
+    title: "Execution",
     description:
-      "We launch optimized campaigns across Meta and Google to start generating leads.",
+      "We implement the plan: launch campaigns, set up automation workflows, configure your AI receptionist, and build your website. Everything goes live.",
   },
   {
     icon: TrendingUp,
     step: "04",
-    title: "Scale & Optimize",
+    title: "Optimize & Scale",
     description:
-      "Continuous optimization and scaling to maximize your ROI and book more clients.",
+      "We continuously monitor, optimize, and scale across all channels to maximize your ROI and convert more leads into booked clients.",
   },
 ];
 

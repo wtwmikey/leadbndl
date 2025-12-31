@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Target, Bot, Phone, MessageSquare, Layout } from "lucide-react";
+import { Target, Bot, Phone, Layout } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -11,11 +11,18 @@ import {
 
 const services = [
   {
+    icon: Target,
+    title: "Meta & Google Ads",
+    description:
+      "Strategic paid advertising campaigns across Meta (Facebook & Instagram) and Google platforms that reach your ideal clients and capture high-intent searches to turn prospects into buyers.",
+    features: ["Meta Ads", "Google Ads", "Lookalike Audiences", "Retargeting Funnels", "Search Campaigns", "YouTube Ads"],
+  },
+  {
     icon: Bot,
     title: "AI Automation",
     description:
-      "Intelligent automation solutions that streamline your business operations and enhance productivity.",
-    features: ["Workflow Automation", "Smart Routing", "24/7 Operations"],
+      "Intelligent automation solutions that streamline your business operations, including text and email automation that engage leads instantly with automated messages and sequences.",
+    features: ["Text & Email Automation", "Workflow Automation", "Smart Routing", "24/7 Operations"],
   },
   {
     icon: Phone,
@@ -25,32 +32,11 @@ const services = [
     features: ["24/7 Availability", "Natural Conversations", "Automated Callbacks", "Appointment Scheduling"],
   },
   {
-    icon: MessageSquare,
-    title: "Text & Email Automation",
-    description:
-      "Engage leads instantly with automated text messages and email sequences that nurture prospects and drive conversions.",
-    features: ["SMS Campaigns", "Email Sequences", "Multi-channel Nurturing"],
-  },
-  {
     icon: Layout,
     title: "Website Design",
     description:
       "Beautiful, conversion-focused websites that showcase your brand and turn visitors into customers.",
     features: ["Custom Design", "Mobile Responsive", "SEO Optimized"],
-  },
-  {
-    icon: Facebook,
-    title: "Meta Ads",
-    description:
-      "Strategic Facebook & Instagram campaigns that reach your ideal clients where they spend their time.",
-    features: ["Lookalike Audiences", "Retargeting Funnels", "Lead Forms"],
-  },
-  {
-    icon: Target,
-    title: "Google Ads",
-    description:
-      "Capture high-intent searches and turn searchers into buyers with precision-targeted campaigns.",
-    features: ["Search Campaigns", "Display Network", "YouTube Ads"],
   },
 ];
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Target, Bot, Phone, Layout } from "lucide-react";
+import { Target, Bot, Phone, Layout, Video } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -38,6 +38,13 @@ const services = [
       "Beautiful, conversion-focused websites that showcase your brand and turn visitors into customers.",
     features: ["Custom Design", "Mobile Responsive", "SEO Optimized"],
   },
+  {
+    icon: Video,
+    title: "Video Editing",
+    description:
+      "Professional video editing services that bring your content to life with stunning visuals, smooth transitions, and engaging storytelling that captivates your audience.",
+    features: ["Social Media Videos", "Commercial Production", "Color Grading", "Motion Graphics", "Video Optimization", "Multi-Format Export"],
+  },
 ];
 
 const Services = () => {
@@ -57,7 +64,7 @@ const Services = () => {
             What We <span className="gradient-text">Do Best</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            AI-powered automation and lead management solutions that ensure every lead gets the attention they deserve, plus beautiful website design and full-service paid advertising that delivers real, measurable results.
+            AI-powered automation and lead management solutions that ensure every lead gets the attention they deserve, plus beautiful website design, professional video editing, and full-service paid advertising that delivers real, measurable results.
           </p>
         </motion.div>
 

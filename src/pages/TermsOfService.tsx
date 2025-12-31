@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 import { motion } from "framer-motion";
-import Index from "./Index";
 
 const TermsOfService = () => {
   const navigate = useNavigate();
@@ -12,15 +11,11 @@ const TermsOfService = () => {
 
   return (
     <>
-      {/* Blurred background - the home page */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="blur-sm">
-          <Index />
-        </div>
-      </div>
+      {/* Blurred background overlay */}
+      <div className="fixed inset-0 bg-background/95 backdrop-blur-md z-40" />
 
       {/* Modal overlay */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

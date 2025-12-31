@@ -52,13 +52,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li>
-                <a href="mailto:michael@leadbndl.online" className="hover:text-foreground transition-colors">
-                  michael@leadbndl.online
-                </a>
-              </li>
-              <li>
-                <a href="tel:+15189372711" className="hover:text-foreground transition-colors">
-                  (518) 937-2711
+                <a href="mailto:info@leadbndl.online" className="hover:text-foreground transition-colors">
+                  info@leadbndl.online
                 </a>
               </li>
             </ul>
@@ -66,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2024 LeadBNDL. All rights reserved.</p>
+          <p>© 2026 LeadBNDL. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">
               Privacy Policy

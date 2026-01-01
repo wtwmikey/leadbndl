@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { triggerHaptic } from "@/lib/haptics";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -246,7 +247,10 @@ const CarouselDots = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     }, [api]);
 
     const scrollTo = React.useCallback(
-      (index: number) => api?.scrollTo(index),
+      (index: number) => {
+        triggerHaptic('selection');
+        api?.scrollTo(index);
+      },
       [api],
     );
 

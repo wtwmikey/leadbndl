@@ -20,11 +20,11 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
     >
-      <nav className="container max-w-6xl mx-auto px-4 h-18 flex items-center justify-center md:justify-between relative">
+      <nav className="container max-w-6xl mx-auto px-4 h-20 flex items-center justify-center md:justify-between relative">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="LeadBNDL" className="h-10 w-auto" />
-          <span className="text-xl font-bold">Lead<span className="gradient-text">BNDL</span></span>
+          <img src={logo} alt="LeadBNDL" className="h-14 w-auto" />
+          <span className="text-2xl md:text-3xl font-bold">Lead<span className="gradient-text">BNDL</span></span>
         </a>
 
         {/* Desktop Navigation */}
@@ -51,7 +51,7 @@ const Navbar = () => {
           className="md:hidden p-2 text-foreground absolute right-4"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </button>
       </nav>
 

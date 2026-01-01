@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4 inline-block">
+            <div className="flex items-center gap-2 mb-4">
               <img src={logo} alt="LeadBNDL" className="h-10 w-auto" />
               <span className="text-2xl font-bold">Lead<span className="gradient-text">BNDL</span></span>
-            </a>
+            </div>
             <p className="text-muted-foreground max-w-sm mb-6">
               AI-powered automation and lead management solutions that ensure every lead gets the attention they deserve, plus strategic Meta and Google advertising.
             </p>

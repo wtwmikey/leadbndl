@@ -4,7 +4,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="cta" className="py-24 px-4 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-radial opacity-40" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
@@ -39,7 +39,7 @@ const CTA = () => {
             <div className="flex justify-center">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
-                  Book Your Free Call
+                  Book A Call
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>

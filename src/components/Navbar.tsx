@@ -20,7 +20,7 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"
     >
-      <nav className="container max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <nav className="container max-w-6xl mx-auto px-4 h-18 flex items-center justify-center md:justify-between relative">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <img src={logo} alt="LeadBNDL" className="h-10 w-auto" />
@@ -48,10 +48,10 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground absolute right-4"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
         </button>
       </nav>
 

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-28 md:pt-36">
       {/* Background glow effect */}
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
       
@@ -17,9 +17,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="pt-7 md:pt-10"
         >
           {/* Main headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-balance mt-7 md:mt-10">
             Complete Marketing &{" "}
             <span className="gradient-text">Automation Solutions</span>
           </h1>
@@ -39,7 +40,7 @@ const Hero = () => {
           >
             <Button variant="hero" size="xl" asChild>
               <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
-                Get Your Free Strategy Call
+                Book A Free Call
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>

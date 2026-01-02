@@ -39,7 +39,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="default" size="sm" asChild>
-            <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.leadconnectorhq.com/widget/booking/D4J48KVYYJd0x93PKyvo" target="_blank" rel="noopener noreferrer">
               Get Started
             </a>
           </Button>
@@ -75,7 +75,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="default" size="sm" className="w-fit" asChild>
-              <a href="https://forms.gle/XtT5fYuD9qWyKy789" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.leadconnectorhq.com/widget/booking/D4J48KVYYJd0x93PKyvo" target="_blank" rel="noopener noreferrer">
                 Get Started
               </a>
             </Button>
